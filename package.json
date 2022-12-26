@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/guanruihua/script-cli.git"
+    "url": "git://github.com/guanruihua/iscript-cli.git"
   },
   "files": [
     "package.json",
@@ -22,11 +22,12 @@
     "index.js"
   ],
   "bugs": {
-    "url": "https://github.com/guanruihua/script-cli/issues"
+    "url": "https://github.com/guanruihua/iscript-cli/issues"
   },
-  "homepage": "https://github.com/guanruihua/script-cli",
+  "homepage": "https://github.com/guanruihua/iscript-cli",
   "keywords": [],
   "devDependencies": {
-    "commander": "^9.4.1"
+    "commander": "^9.4.1",
+    "enquirer": "^2.3.6"
   }
 }

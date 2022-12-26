@@ -1,6 +1,21 @@
 #!/usr/bin/env node
-const cli = require('../src/cli')
+const { select, input, execSync } = require('../src/hook')
+const data = execSync('git status')
 
-console.log('Hello World Script-Cli')
+console.log(data.toString())
+// (async () => {
+// 	const name = await input([{
+// 		type: 'input',
+// 		name: 'username',
+// 		message: 'What is your username?'
+// 	}])
+// 	const color = await select({
+// 		name: 'color',
+// 		message: 'Pick a flavor',
+// 		choices: ['apple', 'grape', 'watermelon', 'cherry', 'orange']
+// 	})
 
-cli()
+// 	console.log(name, color);
+
+// 	// process.exit(0)
+// })()
