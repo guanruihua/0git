@@ -1,0 +1,32 @@
+{
+  "name": "iscript-cli",
+  "version": "0.0.1-beta.1",
+  "description": "",
+  "main": "src/cli.js",
+  "author": "ruihuag",
+  "license": "MIT",
+  "scripts": {
+    "pub": "npm publish"
+  },
+  "bin": {
+    "iscript": "bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/guanruihua/script-cli.git"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "index.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/guanruihua/script-cli/issues"
+  },
+  "homepage": "https://github.com/guanruihua/script-cli",
+  "keywords": [],
+  "devDependencies": {
+    "commander": "^9.4.1"
+  }
+}
