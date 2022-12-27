@@ -9,10 +9,9 @@ module.exports = async function (defaultCommitMessage = '') {
 
 	try {
 		execSync('git add .')
-
-		console.log(
-			execSync(`git commit -m  "${commitMessage}"`)
-				.toString()
+		const command = `git commit -m  "${commitMessage}"`
+		console.log('Command:', command)
+		console.log(execSync(command).toString()
 		)
 	} catch (error) {
 		console.log('Commit Message Error')
