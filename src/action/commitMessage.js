@@ -7,8 +7,6 @@ module.exports = async function () {
 		message: 'Commit Message'
 	}])
 
-	console.log([
-		execSync('git add .'),
-		execSync(`git commit -m  "${commitMessage}"`),
-	].map(i => i.toString()).join('\n'))
+	console.log(execSync('git add .').toString())
+	console.log(execSync(`git commit -m  "${commitMessage}"`).toString())
 }
