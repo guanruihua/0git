@@ -2,7 +2,7 @@ const { input, execSync } = require('../../hook')
 const timeString = new Date().toDateString()
 
 module.exports = async function handleCommit() {
-	const commitMessage = await input([{
+	const { commitMessage } = await input([{
 		type: 'input',
 		name: 'commitMessage',
 		message: 'Add Commit Message'
