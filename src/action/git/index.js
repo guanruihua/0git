@@ -5,18 +5,20 @@ const handleNewBranch = require('./handleNewBranch')
 const handleCommit = require('./handleCommit')
 
 async function handlePush(tag) {
-	let tmp_b_t = getGitBranch()
-
-	if (tag) {
-		const newTag = await input([{
-			type: 'input',
-			name: 'newTag',
-			message: 'Add to a new Tag (default version)'
-		}])
-		tmp_b_t += (' ' + newTag) || ` v${pkg.version}`
-	}
 
 	try {
+		let tmp_b_t = getGitBranch()
+
+		if (tag) {
+			const { newTag } = await input([{
+				type: 'input',
+				name: 'newTag',
+				message: 'Add to a new Tag',
+				default: `v${pkg.version}`
+			}])
+			tmp_b_t += (' ' + newTag)
+			console.log(execSync(`git tag ${newTag}`).toString())
+		}
 		console.log(execSync(`git push -u origin ${tmp_b_t}`).toString())
 	} catch (error) {
 		console.log('Error: Cannot Push modification to Repositories')

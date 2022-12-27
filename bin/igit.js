@@ -9,8 +9,8 @@ program
 	.name('igit')
 	.option('-c, --commit', 'Add Commit Message')
 	.option('-p, --push', 'Push modification to Repositories')
-	.option('-b, --branch', 'Switched to a new branch (default version)')
-	.option('-t, --tag', 'Added a new Tag (default version)')
+	.option('-b, --branch', 'Switched to a new branch')
+	.option('-t, --tag', 'Added a new Tag')
 	.action((action) => actionGit(action))
 
 program.parse()

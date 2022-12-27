@@ -4,6 +4,7 @@ const { prompt } = require('enquirer')
 // 	type: 'input',
 // 	name: 'commitMessage',
 // 	message: 'Commit Message'
+//  default: ''
 // }])
 
 module.exports = function input(options = []) {
