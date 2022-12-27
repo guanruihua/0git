@@ -8,16 +8,14 @@ program.version(pkg.version)
 
 program
 	.name('igit')
-	// .command('igit <action>')
-	.option('-c, --commit', 'Add Commit')
-	// .option('-g, --git [type]', 'Add [marble]', 'Angie')
-	.action(function (action, cmd) {
-		// console.log({ action })
+	.option('-c, --commit', 'Add Commit Message')
+	.option('-p, --push', 'Push modification to Repositories')
+	.option('-b, --branch', 'Push Change To Repositories')
+	.action(function (action) {
+		console.log({ action })
 		if (action.commit) {
 			commitMessage()
 		}
 	})
 
-
-// program.parse(process.argv)
 program.parse()
