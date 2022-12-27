@@ -8,7 +8,7 @@ const { select, input, execSync } = require('../src/hook')
 console.log([
 	execSync('git add .'),
 	execSync(`git commit -m  "chore: test script"`),
-].map(i => i.toString()))
+].map(i => i.toString()).join('\n'))
 // (async () => {
 // 	const name = await input([{
 // 		type: 'input',
