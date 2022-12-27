@@ -9,7 +9,8 @@
     "pub": "npm publish"
   },
   "bin": {
-    "iscript": "bin/cli.js"
+    "iscript": "bin/cli.js",
+    "igit": "bin/igit.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,12 @@
     "url": "https://github.com/guanruihua/iscript-cli/issues"
   },
   "homepage": "https://github.com/guanruihua/iscript-cli",
-  "keywords": [],
+  "keywords": [
+    "script",
+    "shell",
+    "git",
+    "command"
+  ],
   "devDependencies": {
     "commander": "^9.4.1",
     "enquirer": "^2.3.6"

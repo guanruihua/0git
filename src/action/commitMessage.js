@@ -4,7 +4,7 @@ module.exports = async function () {
 	const commitMessage = await input([{
 		type: 'input',
 		name: 'commitMessage',
-		message: ' Commit Message'
+		message: 'Commit Message'
 	}])
 
 	console.log([

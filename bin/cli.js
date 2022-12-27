@@ -1,25 +1,15 @@
 #!/usr/bin/env node
 const { select, input, execSync } = require('../src/hook')
 const { commitMessage } = require('../src/action')
-// const data = execSync('git status')
-// const data = execSync('git status')
-
-// console.log(data.toString())
 
 
 
-async function action() {
+// 	.parse(process.argv)
 
-	await commitMessage()
-	// 	const color = await select({
-	// 		name: 'color',
-	// 		message: 'Pick a flavor',
-	// 		choices: ['apple', 'grape', 'watermelon', 'cherry', 'orange']
-	// 	})
+// console.log('you ordered a pizza with:');
+// if (program.git) console.log('  - git');
+// console.log('  - %s git', program.git);
 
-	// 	console.log(name, color);
+// await commitMessage()
 
-	// 	// process.exit(0)
-}
-
-action()
+// 	// process.exit(0)
