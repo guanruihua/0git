@@ -8,6 +8,8 @@ module.exports = async function handleCommit() {
 		message: 'Add Commit Message'
 	}])
 
+	console.log({ commitMessage })
+
 	try {
 		execSync('git add .')
 		const myCommand = `git commit -m  "${commitMessage || ("test: " + timeString)}"`
