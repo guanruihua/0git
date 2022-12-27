@@ -8,7 +8,7 @@ module.exports = async function () {
 			type: 'input',
 			name: 'newBranch',
 			message: 'Switched to a new branch',
-			default: 'v' + pkg.version
+			default: pkg.version
 		}])
 
 		const tmp_newBranch = newBranch
