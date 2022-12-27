@@ -14,7 +14,7 @@ program
 	.action(function (action) {
 		console.log({ action })
 		if (action.commit) {
-			commitMessage(`test: ${new Date()}`)
+			commitMessage(`test: ${new Date().toString()}`)
 		}
 	})
 
