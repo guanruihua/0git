@@ -1,6 +1,15 @@
 #!/usr/bin/env node
-const cli = require('../src/cli')
+const { select, input, execSync } = require('../src/hook')
+const { commitMessage } = require('../src/action')
 
-console.log('Hello World Script-Cli')
 
-cli()
+
+// 	.parse(process.argv)
+
+// console.log('you ordered a pizza with:');
+// if (program.git) console.log('  - git');
+// console.log('  - %s git', program.git);
+
+// await commitMessage()
+
+// 	// process.exit(0)
