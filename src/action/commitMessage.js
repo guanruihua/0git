@@ -12,7 +12,7 @@ module.exports = async function () {
 	try {
 		execSync('git add .')
 		const myCommand = `git commit -m  "${commitMessage}"`
-		console.log('Command:', myCommand)
+		console.log('Command:'+ myCommand)
 		console.log(execSync(myCommand).toString()
 		)
 	} catch (error) {
