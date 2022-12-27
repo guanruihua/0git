@@ -12,7 +12,7 @@ program
 	.option('-p, --push', 'Push modification to Repositories')
 	.option('-b, --branch', 'Push Change To Repositories')
 	.action(function (action) {
-		console.log({ action })
+		console.log({ action }, new Date().toDateString())
 		if (action.commit) {
 			commitMessage(`test: ${new Date().toDateString()}`)
 		}
