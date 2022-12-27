@@ -1,8 +1,14 @@
 #!/usr/bin/env node
 const { select, input, execSync } = require('../src/hook')
-const data = execSync('git status')
+// const data = execSync('git status')
+// const data = execSync('git status')
 
-console.log(data.toString())
+// console.log(data.toString())
+
+console.log([
+	execSync('git add .'),
+	execSync(`git commit -m  'chore: test script'`),
+].map(i => i.toString()))
 // (async () => {
 // 	const name = await input([{
 // 		type: 'input',
