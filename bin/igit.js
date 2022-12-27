@@ -6,18 +6,12 @@ const pkg = require('../package.json')
 
 program.version(pkg.version)
 
-const timeString = new Date().toDateString()
 
 program
 	.name('igit')
 	.option('-c, --commit', 'Add Commit Message')
 	.option('-p, --push', 'Push modification to Repositories')
 	.option('-b, --branch', 'Push Change To Repositories')
-	.action(function (action) {
-		console.log({ action })
-		if (action.commit) {
-			commitMessage(`test: ${timeString}`)
-		}
-	})
+	.action((action) => commitMessage(action))
 
 program.parse()
