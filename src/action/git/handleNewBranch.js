@@ -12,7 +12,7 @@ module.exports = async function () {
 		}])
 
 		const tmp_newBranch = newBranch
-		console.log(execSync(`git checkout -b ${tmp_newBranch}`).toString())
+		execSync(`git checkout -b ${tmp_newBranch}`)
 	} catch (error) {
 		console.log('Error: Cannot switch to new branch')
 	}

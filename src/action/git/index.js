@@ -17,9 +17,9 @@ async function handlePush(tag) {
 				default: `v${pkg.version}`
 			}])
 			tmp_b_t += (' ' + newTag)
-			console.log(execSync(`git tag ${newTag}`).toString())
+			execSync(`git tag ${newTag}`)
 		}
-		console.log(execSync(`git push -u origin ${tmp_b_t}`).toString())
+		execSync(`git push -u origin ${tmp_b_t}`).toString()
 	} catch (error) {
 		console.log('Error: Cannot Push modification to Repositories')
 		console.error(error)
