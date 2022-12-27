@@ -1,1 +1,1 @@
-module.exports.commitMessage = require('./commitMessage')
+module.exports.actionGit = require('./git')
