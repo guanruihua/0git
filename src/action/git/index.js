@@ -7,7 +7,7 @@ const handleCommit = require('./handleCommit')
 async function handlePush(tag) {
 
 	try {
-		let tmp_b_t = getGitBranch()
+		let tmp_b_t = getGitBranch().trimEnd()
 
 		if (tag) {
 			const { newTag } = await input([{
@@ -19,7 +19,7 @@ async function handlePush(tag) {
 			tmp_b_t += (' ' + newTag)
 			execSync(`git tag ${newTag}`)
 		}
-		execSync(`git push -u origin ${tmp_b_t}`).toString()
+		execSync(`git push -u origin ${tmp_b_t}`)
 	} catch (error) {
 		console.log('Error: Cannot Push modification to Repositories')
 		console.error(error)
