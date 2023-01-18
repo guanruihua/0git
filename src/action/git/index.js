@@ -1,6 +1,5 @@
 const { input, execSync } = require('../../hook')
-const { getGitBranch } = require('./util')
-const pkg = require('../../../package.json')
+const { getGitBranch, getPackage } = require('./util')
 const handleNewBranch = require('./handleNewBranch')
 const handleCommit = require('./handleCommit')
 
@@ -8,13 +7,13 @@ async function handlePush(tag) {
 
 	try {
 		let tmp_b_t = getGitBranch().trimEnd()
-
+		const { version } = getPackage()
 		if (tag) {
 			const { newTag } = await input([{
 				type: 'input',
 				name: 'newTag',
 				message: 'Add to a new Tag',
-				default: `v${pkg.version}`
+				default: `v${version}`
 			}])
 			tmp_b_t += (' ' + newTag)
 			execSync(`git tag ${newTag}`)
