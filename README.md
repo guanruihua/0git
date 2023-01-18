@@ -1,12 +1,12 @@
-# iscript-cli
+# 0git
 
 > 常用脚本
 > 日常开发经常需要使用到的脚本, 懒得一个一个配了, 写成脚本, 方便使用
 
-## igit
+## 命令
 
 ```shell
-igit -b -t -c -p
+0git -b -t -c -p
 ```
 
 > - `-c, --commit`: Add Commit Message 添加备注
