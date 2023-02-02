@@ -6,7 +6,7 @@ const pkg = require('../package.json')
 program.version(pkg.version)
 
 program
-	.name('igit')
+	.name('0git')
 	.option('-c, --commit', 'Add Commit Message')
 	.option('-p, --push', 'Push modification to Repositories')
 	.option('-b, --branch', 'Switched to a new branch')

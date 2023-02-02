@@ -8,7 +8,7 @@ module.exports = async function handleCommit() {
 			type: 'input',
 			name: 'commitMessage',
 			message: 'Add Commit Message',
-			default: ("test: " + timeString)
+			default: ("feat: " + timeString)
 		}])
 		execSync('git add .')
 		const myCommand = `git commit -m  "${commitMessage}"`

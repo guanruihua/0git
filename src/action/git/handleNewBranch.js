@@ -1,14 +1,15 @@
 const { input, execSync } = require('../../hook')
-const pkg = require('../../../package.json')
+const { getPackage } = require('./util')
 
 module.exports = async function () {
 
 	try {
+		const { version } = getPackage()
 		const { newBranch } = await input([{
 			type: 'input',
 			name: 'newBranch',
 			message: 'Switched to a new branch',
-			default: pkg.version
+			default: version
 		}])
 
 		const tmp_newBranch = newBranch

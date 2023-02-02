@@ -1,6 +1,6 @@
 {
-  "name": "iscript-cli",
-  "version": "0.0.4",
+  "name": "0git",
+  "version": "0.0.5",
   "description": "",
   "main": "src/cli.js",
   "author": "ruihuag",
@@ -9,12 +9,11 @@
     "pub": "npm publish"
   },
   "bin": {
-    "iscript": "bin/cli.js",
-    "igit": "bin/igit.js"
+    "0git": "bin/0git.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/guanruihua/iscript-cli.git"
+    "url": "git://github.com/guanruihua/0git.git"
   },
   "files": [
     "package.json",
@@ -23,15 +22,18 @@
     "index.js"
   ],
   "bugs": {
-    "url": "https://github.com/guanruihua/iscript-cli/issues"
+    "url": "https://github.com/guanruihua/0git/issues"
   },
-  "homepage": "https://github.com/guanruihua/iscript-cli",
+  "homepage": "https://github.com/guanruihua/0git",
   "keywords": [
     "script",
     "shell",
     "git",
     "command"
   ],
+  "peerDependencies": {
+    "commander": "^9.4.1"
+  },
   "devDependencies": {
     "commander": "^9.4.1",
     "enquirer": "^2.3.6"
